@@ -1,7 +1,2 @@
-#include <bits/stdc++.h>
-using namespace std;
-
-int main() {
-    // your code goes here
-
-}
+1≤T≤10001 \leq T \leq 10001≤T≤1000
+1≤Y≤X≤1061 \leq Y \le X \leq 10^61≤Y≤X≤106
