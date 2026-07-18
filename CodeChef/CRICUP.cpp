@@ -8,7 +8,7 @@ int main() {
 	  while ( t--){
 	       int x,y,d;
 	        cin>>x>>y>>d;
-	        if ( abs((x-y) <= d)){
+	        if ( abs(x-y) <= d){
 	             cout<<"YES"<<endl;
 	        }
 	        else {
