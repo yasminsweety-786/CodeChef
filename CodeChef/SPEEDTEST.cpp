@@ -9,8 +9,8 @@ int main() {
 	   while ( t--){
 	        int a,x,b,y;
 	         cin>>a>>x>>b>>y;
-	    int AL= a/x;
-	     int BB = b/y;
+	    int AL= a*y;
+	     int BB = b*x;
 	     if ( AL> BB)
 	     {
 	          cout<<"Alice"<<endl;
