@@ -8,12 +8,8 @@ int main() {
 	  while(t--){
 	      int n;
 	       cin>>n;
-	       if (n> 2){
-	            cout<<n*2<<endl;
-	       }
-	       else{
-	            cout<<2<<endl;
-	       }
+	      int ans = n*(n-1);
+	      cout<<ans<<endl;
 	       
 	  }
 
