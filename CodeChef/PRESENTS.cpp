@@ -8,16 +8,7 @@ int main() {
 	   while(t--){
 	        int n;
 	        cin>>n;
-	         if ( n>4){
-	              cout<<n-1<<endl;
-	         }else if(n>10){
-	             
-	         
-	   cout<<((n/4-1)-1)<<endl;
-	         }
-	         else {
-	              cout<<n<<endl;
-	         }
+	     cout<<n-(n/5)<<endl;
 
 }
 }
