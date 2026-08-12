@@ -8,12 +8,8 @@ int main() {
 	   while(t--){
 	        int x,y;
 	         cin>>x>>y;
-	          if ( x<y){
-	               cout<<y/x<<endl;
-	          }
-	          else {
-	               cout<<0<<endl;
-	          }
+	          long long ans = (y-1)/x;
+	          cout<<ans<<endl;
 	   }
 
 }
