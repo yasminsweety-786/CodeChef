@@ -1,0 +1,1 @@
+it will print everything on a single line with "," as spaces separating the arguments and a newline character added automatically at the end.
