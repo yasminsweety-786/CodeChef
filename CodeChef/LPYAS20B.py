@@ -1,0 +1,5 @@
+# cook your dish here
+n=4
+for i in range(n):
+   
+     print("*"*n)
