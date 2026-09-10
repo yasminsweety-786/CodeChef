@@ -1,0 +1,1 @@
+printf() is a function in the C programming language that is used to print formatted text to the standard output.
