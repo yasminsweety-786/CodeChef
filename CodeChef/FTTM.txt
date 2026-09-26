@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char S[1001], T[101];
+    
+    // Input strings
+    fgets(S, sizeof(S), stdin);
+    // Remove newline if present
+    S[strcspn(S, "\n")] = '\0';
+    
+    fgets(T, sizeof(T), stdin);
+    T[strcspn(T, "\n")] = '\0';
+    
+    // Check substring
+    if (strstr(S, T) != NULL)
+        printf("YES\n");
+    else
+        printf("NO\n");
+    
+    return 0;
+}
+
+
