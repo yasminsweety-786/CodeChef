@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+    char* S = (char*)malloc(100005 * sizeof(char));
+    
+    // Read the entire line (including spaces)
+    if (fgets(S, 100005, stdin) != NULL) {
+        int N = strlen(S);
+        // Remove trailing newline if present
+        if (N > 0 && S[N - 1] == '\n') {
+            S[N - 1] = '\0';
+            N--;
+        }
+        
+        int freq[26] = {0};
+        for (int i = 0; i < N; i++) {
+            if (S[i] >= 'a' && S[i] <= 'z') {
+                freq[S[i] - 'a']++;
+            } else if (S[i] >= 'A' && S[i] <= 'Z') {
+                freq[S[i] - 'A']++;
+            }
+        }
+        
+        int maxFreq = 0;
+        char bestLetter = 'a';
+        for (int i = 0; i < 26; i++) {
+            if (freq[i] > maxFreq) {
+                maxFreq = freq[i];
+                bestLetter = 'a' + i;
+            }
+        }
+        printf("%c\n", bestLetter);
+    }
+    
+    free(S);
+    return 0;
+}
