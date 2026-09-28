@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+    char* S = (char*)malloc(100005 * sizeof(char));
+    if (scanf("%s", S) != 1) {
+        free(S);
+        return 0;
+    }
+    int N = strlen(S);
+    if (N < 2) {
+        printf("0\n");
+        free(S);
+        return 0;
+    }
+    
+    int freq[676] = {0};
+    for (int i = 0; i < N - 1; i++) {
+        int code = (S[i] - 'a') * 26 + (S[i + 1] - 'a');
+        freq[code]++;
+    }
+    
+    int count = 0;
+    for (int i = 0; i < 676; i++) {
+        if (freq[i] > 1) {
+            count++;
+        }
+    }
+    printf("%d\n", count);
+    
+    free(S);
+    return 0;
+}
