@@ -1,24 +1,34 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 int main() {
-    char S[1001], T[101];
+    char* S = (char*)malloc(1005 * sizeof(char));
+    char* T = (char*)malloc(1005 * sizeof(char));
     
-    // Input strings
-    fgets(S, sizeof(S), stdin);
-    // Remove newline if present
-    S[strcspn(S, "\n")] = '\0';
+    // Read S
+    if (fgets(S, 1005, stdin) != NULL) {
+        int lenS = strlen(S);
+        if (lenS > 0 && S[lenS - 1] == '\n') {
+            S[lenS - 1] = '\0';
+        }
+        
+        // Read T
+        if (fgets(T, 1005, stdin) != NULL) {
+            int lenT = strlen(T);
+            if (lenT > 0 && T[lenT - 1] == '\n') {
+                T[lenT - 1] = '\0';
+            }
+            
+            if (strstr(S, T) != NULL) {
+                printf("YES\n");
+            } else {
+                printf("NO\n");
+            }
+        }
+    }
     
-    fgets(T, sizeof(T), stdin);
-    T[strcspn(T, "\n")] = '\0';
-    
-    // Check substring
-    if (strstr(S, T) != NULL)
-        printf("YES\n");
-    else
-        printf("NO\n");
-    
+    free(S);
+    free(T);
     return 0;
 }
-
-
