@@ -1,0 +1,1 @@
+Each printf statement prints its content sequentially, so "Hello " and "World!" will be printed together.
