@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+	// your code goes here
+int a,sum = 0, i = 2;
+scanf("%d", &a);
+
+while(i<=a){
+    sum += i;
+    i += 2;
+}
+
+printf("%d",sum);
+
+}
+
