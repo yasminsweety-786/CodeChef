@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+	// Declare variables x and y
+	int x, y;
+
+	// Read input values for x and y
+	scanf("%d %d", &x, &y);
+
+	// Print the product of x and y
+	printf("%d\n", x * y);
+
+	return 0;
+}
